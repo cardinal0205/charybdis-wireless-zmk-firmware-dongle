@@ -33,6 +33,19 @@
     // #define MOUSE   3
     // #define SCROLL  4
 
+    // This shared keymap builds for prospector and non-prospector firmwares. 
+    // This stubs the key bindings that are contained in the prospector module
+    // so non-prospector firmware can build.
+    #ifndef CONFIG_SHIELD_PROSPECTOR_ADAPTER
+        behaviors {
+            /omit-if-no-ref/ pbl: prospector_brightness_stub {
+                compatible = "zmk,behavior-macro-two-param";
+                #binding-cells = <2>;
+                bindings = <&none>;
+            };
+        };
+    #endif
+
     keymap {
         compatible = "zmk,keymap";
         BASE {
@@ -48,10 +61,10 @@
         };
 
         NUM {
-            display-name = "Numbers";
+            display-name = "Num";
             bindings = <
 &kp KP_NUM  &kp F1    &kp F2     &kp F3      &kp F4            &kp F5         &kp F6           &kp F7        &kp F8     &kp F9     &kp F10           &kp F11
-&none       &kp LALT  &kp LCTRL  &kp LSHIFT  &kp LGUI          &kp C_AL_CALC  &kp KP_SUBTRACT  &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LALT    &kp LCTRL &kp LSHIFT &kp LGUI    &none             &kp C_AL_CALC  &kp KP_SUBTRACT  &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &none       &none     &none      &none       &none             &none          &kp KP_PLUS      &kp KP_N4     &kp KP_N5  &kp KP_N6  &kp KP_MULTIPLY   &kp KP_DIVIDE
 &mo 3       &none     &none      &none       &none             &none          &kp KP_N0        &kp KP_N1     &kp KP_N2  &kp KP_N3  &kp KP_DOT        &kp KP_ENTER
                                  &kp SPACE   &kp LEFT_CONTROL  &none          &kp KP_CLEAR     &kp EQUAL
@@ -60,38 +73,38 @@
         };
 
         FUNC {
-            display-name = "Function";
+            display-name = "Func";
             bindings = <
-&kp TILDE  &kp EXCLAMATION  &kp AT    &kp HASH       &kp DLLR          &kp PERCENT         &kp CARET      &kp AMPS     &kp ASTRK  &kp LPAR    &kp RPAR   &kp UNDER
-&none      &kp LALT         &kp LCTRL &kp LSHIFT     &kp LGUI          &none               &none          &kp PAGE_UP  &none      &kp INSERT  &none      &kp PIPE
-&none      &none            &kp HOME  &kp PAGE_DOWN  &none             &none               &kp LEFT       &kp DOWN     &kp UP     &kp RIGHT   &kp COLON  &kp DQT
-&mo 3      &none            &kp END   &none          &none             &none               &none          &none        &none      &none       &none      &none
-                                      &kp SPACE      &kp LEFT_CONTROL  &none               &kp DELETE     &kp ENTER
-                                                     &kp LEFT_SHIFT    &none               &kp BACKSPACE
+&kp TILDE  &kp EXCLAMATION  &kp AT      &kp HASH       &kp DLLR          &kp PERCENT         &kp CARET      &kp AMPS     &kp ASTRK  &kp LPAR    &kp RPAR   &kp UNDER
+&kp LALT   &kp LCTRL        &kp LSHIFT  &kp LGUI       &none             &none               &none          &kp PAGE_UP  &none      &kp INSERT  &none      &kp PIPE
+&none      &none            &kp HOME    &kp PAGE_DOWN  &none             &none               &kp LEFT       &kp DOWN     &kp UP     &kp RIGHT   &kp COLON  &kp DQT
+&mo 3      &none            &kp END     &none          &none             &none               &none          &none        &none      &none       &none      &none
+                                        &kp SPACE      &kp LEFT_CONTROL  &none               &kp DELETE     &kp ENTER
+                                                       &kp LEFT_SHIFT    &none               &kp BACKSPACE
             >;
         };
 
         MOUSE {
-            display-name = "Mouse";
+            display-name = "Mse";
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4          &none     &none     &none  &none  &none  &sys_reset
-&bt BT_CLR_ALL  &kp LALT      &kp LCTRL     &kp LSHIFT    &kp LGUI           &none                 &none     &none     &none  &none  &none  &studio_unlock
-&none           &none         &none         &none         &mo 4              &none                 &to 0     &none     &none  &none  &none  &none
-&none           &none         &none         &none         &to 4              &none                 &none     &none     &none  &none  &none  &none
-                                            &mkp MB1      &mkp MB3           &mkp MB3              &mkp MB3  &mkp MB1
+&none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4          &out OUT_TOG     &none     &none  &none  &none  &studio_unlock
+&kp LALT        &kp LCTRL     &kp LSHIFT    &kp LGUI      &none              &none                 &none            &none     &none  &none  &none  &none
+&none           &none         &none         &none         &mo 4              &none                 &to 0            &none     &none  &none  &none  &bt BT_CLR 
+&none           &none         &none         &none         &to 4              &none                 &none            &none     &none  &none  &none  &bt BT_CLR_ALL 
+                                            &mkp MB1      &mkp MB3           &mkp MB3              &mkp MB3         &mkp MB1
                                                           &mkp MB2           &mkp MB2              &mkp MB2
             >;
         };
 
         SCROLL {
-            display-name = "Scroll";
+            display-name = "Scrl";
             bindings = <
-&none  &none     &none      &none       &none     &none    &none  &none  &none  &none  &none  &none
-&none  &kp LALT  &kp LCTRL  &kp LSHIFT  &kp LGUI  &none    &none  &none  &none  &none  &none  &none
-&none  &none     &none      &none       &none     &none    &none  &none  &none  &none  &none  &none
-&none  &none     &none      &none       &to 0     &none    &none  &none  &none  &none  &none  &none
-                            &none       &none     &none    &none  &none
-                                        &none     &none    &none
+&none    &none     &none      &none       &none     &none    &none  &none  &none  &none  &none  &none
+&kp LALT &kp LCTRL &kp LSHIFT &kp LGUI    &none     &none    &none  &none  &none  &none  &none  &none
+&none    &none     &none      &none       &none     &none    &none  &none  &none  &none  &none  &none
+&none    &none     &none      &none       &to 0     &none    &none  &none  &none  &none  &none  &none
+                              &none       &none     &none    &none  &none
+                                          &none     &none    &none
             >;
         };
     };
