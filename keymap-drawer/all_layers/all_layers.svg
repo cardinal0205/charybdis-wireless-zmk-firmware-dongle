@@ -399,8 +399,12 @@ text.br  { font-family: "JetBrainsMono Nerd Font"; fill: var(--all-corner); font
 </g>
 <g transform="translate(444, 430) rotate(30.0)" class="key keypos-50">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 64%">&amp;td_base_n…</tspan></text>
-</g>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-1.12em">PAGE</tspan><tspan x="0" dy="1.5em">UP</tspan>
+</text>
+<a href="#Num">
+<text x="0" y="34" class="key hold layer-activator">Num</text>
+</a></g>
 <g transform="translate(728, 411) rotate(-30.0)" class="key keypos-51">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
 <text x="0" y="0" class="key tap">DELETE</text>
@@ -415,8 +419,12 @@ text.br  { font-family: "JetBrainsMono Nerd Font"; fill: var(--all-corner); font
 </g>
 <g transform="translate(406, 496) rotate(30.0)" class="key keypos-54">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 64%">&amp;td_base_f…</tspan></text>
-</g>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-1.12em">PAGE</tspan><tspan x="0" dy="1.5em">DOWN</tspan>
+</text>
+<a href="#Num">
+<text x="0" y="34" class="key hold layer-activator">Num</text>
+</a></g>
 <g transform="translate(766, 477) rotate(-30.0)" class="key keypos-55">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
 <text x="0" y="0" class="key tap">BS</text>
@@ -601,8 +609,10 @@ text.br  { font-family: "JetBrainsMono Nerd Font"; fill: var(--all-corner); font
 </g>
 <g transform="translate(38, 294)" class="key keypos-36">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 64%">&amp;td_return…</tspan></text>
-</g>
+<text x="0" y="0" class="key tap">ESCAPE</text>
+<a href="#Mse">
+<text x="0" y="34" class="key hold layer-activator">Mse</text>
+</a></g>
 <g transform="translate(114, 294)" class="key keypos-37">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
 </g>
@@ -664,8 +674,8 @@ text.br  { font-family: "JetBrainsMono Nerd Font"; fill: var(--all-corner); font
 <tspan x="0" dy="-0.75em">LEFT</tspan><tspan x="0" dy="1.5em">CONTROL</tspan>
 </text>
 </g>
-<g transform="translate(444, 430) rotate(30.0)" class="key keypos-50">
-<rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
+<g transform="translate(444, 430) rotate(30.0)" class="key held keypos-50">
+<rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key held"/>
 </g>
 <g transform="translate(728, 411) rotate(-30.0)" class="key keypos-51">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
@@ -833,8 +843,10 @@ text.br  { font-family: "JetBrainsMono Nerd Font"; fill: var(--all-corner); font
 </g>
 <g transform="translate(38, 294)" class="key keypos-36">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 64%">&amp;td_return…</tspan></text>
-</g>
+<text x="0" y="0" class="key tap">ESCAPE</text>
+<a href="#Mse">
+<text x="0" y="34" class="key hold layer-activator">Mse</text>
+</a></g>
 <g transform="translate(114, 294)" class="key keypos-37">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
 </g>
