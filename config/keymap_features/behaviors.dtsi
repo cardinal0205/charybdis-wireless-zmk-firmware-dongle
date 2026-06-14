@@ -1,6 +1,6 @@
-#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 19 20 21 22  // Left-hand keys.
-#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 16 15 14 13  // Right-hand keys.
-#define THUMBS 36 37 38 39 40  // Thumb keys.
+#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 48 49 50 53 54 // Left-hand keys.
+#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 42 43 44 45 46 47 51 52 55  // Right-hand keys.
+#define THUMBS 48 49 50 51 52 53 54 55 // Thumb keys.
 
 #define MO_TO(layer) &mo_to layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 
@@ -217,31 +217,52 @@
         //    mods          = <MOD_LSFT>;
         //};
 
-        //// Left-hand HRM
-        //ht_left: left_side_homerow_mod {
-        //    compatible = "zmk,behavior-hold-tap";
-        //    #binding-cells = <2>;
-        //    flavor = "balanced";
-        //    tapping-term-ms = <280>;
-        //    quick-tap-ms = <160>;
-        //    require-prior-idle-ms = <65>;
-        //    retro-tap;
-        //    bindings = <&kp>, <&kp>;
-        //    hold-trigger-key-positions = <KEYS_R THUMBS>;
-        //};
+        // Left-hand HRM
+        ht_left: left_side_homerow_mod {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <160>;
+            require-prior-idle-ms = <60>;
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+        };
 
-        //// Right-hand HRM
-        //ht_right: right_side_homerow_mod {
-        //    compatible = "zmk,behavior-hold-tap";
-        //    #binding-cells = <2>;
-        //    flavor = "balanced";
-        //    tapping-term-ms = <280>;
-        //    quick-tap-ms = <160>;
-        //    require-prior-idle-ms = <55>;
-        //    retro-tap;
-        //    bindings = <&kp>, <&kp>;
-        //    hold-trigger-key-positions = <KEYS_L THUMBS>;
-        //};
+        // Right-hand HRM
+        ht_right: right_side_homerow_mod {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <160>;
+            require-prior-idle-ms = <60>;
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+        };
+
+        td_base_num: td_base_num {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&lt 1 PAGE_UP>, <&mo 1>; // hold, tap, double_tap
+        };
+
+        td_base_func: td_base_func {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&lt 2 PAGE_UP>, <&mo 2>; // hold, tap, double_tap
+        };
+
+        td_return_base: td_return_base {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&lt 3 ESCAPE>, <&mo 0>; // hold, tap, double_tap
+        };
 
         //td_esc_scrl_slow: td_esc_scrl_slow {
         //    compatible = "zmk,behavior-tap-dance";
