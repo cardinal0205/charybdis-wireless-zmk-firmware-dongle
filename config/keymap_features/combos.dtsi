@@ -3,32 +3,67 @@
         compatible = "zmk,combos";
 
         combo_0_to_1 {
-            timeout-ms = <500>;
+            timeout-ms = <50>;
             bindings = <&to 1>;
-            key-positions = <12 50>;
+            key-positions = <50 51>;
             layers = <0>;
 	   };
 
-       combo_0_to_2 {
-            timeout-ms = <500>;
+        combo_0_to_2 {
+            timeout-ms = <50>;
             bindings = <&to 2>;
-            key-positions = <12 54>;
+            key-positions = <54 55>;
             layers = <0>;
 	   };
 
-       combo_1_to_0 {
-            timeout-ms = <500>;
+        combo_to_0 {
+            timeout-ms = <50>;
             bindings = <&to 0>;
-            key-positions = <12 50>;
-            layers = <1>;
-	   };
+            key-positions = <48 52>;
+            layers = <1 2>;
+	};
 
-       combo_2_to_0 {
-            timeout-ms = <500>;
-            bindings = <&to 0>;
-            key-positions = <12 54>;
-            layers = <2>;
-	   };
+	combo_lbkt {
+	    timeout-ms = <50>;
+	    key-positions = <4 7>; // KP: RT
+	    bindings = <&mt RBKT LBKT>; // ][ // 可以用CMD+这个单手返回到代码上一个编辑的地方 或者网页返回
+	    layers = <0>;
+	};
+
+	combo_rbkt {
+	    timeout-ms = <50>;
+	    key-positions = <7 8>; // KP: YU
+	    bindings = <&kp RBKT>; // ]
+	    layers = <0>;
+	};
+
+	combo_lpar {
+	    timeout-ms = <50>;
+	    key-positions = <16 19>; // KP: FG
+	    bindings = <&mt RPAR LPAR>; // )(
+	    layers = <0>;
+	};
+
+	combo_rpar {
+	    timeout-ms = <50>;
+	    key-positions = <19 20>; // KP: HJ
+	    bindings = <&kp RPAR>; // )
+	    layers = <0>;
+	};
+
+	combo_lbrc {
+	    timeout-ms = <50>;
+	    key-positions = <28 31>; // KP: VB
+	    bindings = <&mt RBRC LBRC>; // }{
+	    layers = <0>;
+	};
+
+	combo_rbrc {
+	    timeout-ms = <50>;
+	    key-positions = <31 32>; // KP: NM
+	    bindings = <&kp RBRC>; // }
+	    layers = <0>;
+	}; 
 
 	//combo_bt_sel {
         //    bindings = <&mo 5>;

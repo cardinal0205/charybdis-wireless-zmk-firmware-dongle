@@ -243,26 +243,26 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
         };
 
-        td_base_num: td_base_num {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&lt 1 PAGE_UP>, <&mo 1>; // hold, tap, double_tap
-        };
+        //td_base_num: td_base_num {
+        //    compatible = "zmk,behavior-tap-dance";
+        //    #binding-cells = <0>;
+        //    tapping-term-ms = <150>;
+        //    bindings = <&lt 1 PAGE_UP>, <&mo 1>; // hold, tap, double_tap
+        //};
 
-        td_base_func: td_base_func {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&lt 2 PAGE_UP>, <&mo 2>; // hold, tap, double_tap
-        };
+        //td_base_func: td_base_func {
+        //    compatible = "zmk,behavior-tap-dance";
+        //    #binding-cells = <0>;
+        //    tapping-term-ms = <150>;
+        //    bindings = <&lt 2 PAGE_UP>, <&mo 2>; // hold, tap, double_tap
+        //};
 
-        td_return_base: td_return_base {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&lt 3 ESCAPE>, <&mo 0>; // hold, tap, double_tap
-        };
+        //td_return_base: td_return_base {
+        //    compatible = "zmk,behavior-tap-dance";
+        //    #binding-cells = <0>;
+        //    tapping-term-ms = <150>;
+        //    bindings = <&lt 3 ESCAPE>, <&mo 0>; // hold, tap, double_tap
+        //};
 
         //td_esc_scrl_slow: td_esc_scrl_slow {
         //    compatible = "zmk,behavior-tap-dance";
