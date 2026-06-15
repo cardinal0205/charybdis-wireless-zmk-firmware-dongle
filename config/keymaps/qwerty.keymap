@@ -51,12 +51,12 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp GRAVE     &kp N1            &kp N2             &kp N3               &kp N4      &kp N5          &kp N6         &kp N7              &kp N8             &kp N9            &kp N0                    &kp MINUS
-&kp LEFT_GUI  &ht_left LALT Q   &ht_left LCTRL W   &ht_left LSHIFT E    &kp R       &kp T           &kp Y          &kp U               &ht_right RSHIFT I &ht_right RCTRL O &ht_right RALT P          &ht_right RGUI BACKSLASH
-&kp TAB       &kp A   		&kp S              &kp D    		&kp F       &kp G           &kp H          &kp J               &kp K              &kp L             &kp SEMICOLON             &kp SINGLE_QUOTE
-&lt 3 ESCAPE  &kp Z             &kp X              &kp C                &kp V       &kp B           &kp N          &kp M               &kp COMMA          &kp DOT           &kp SLASH                 &lt 3 CAPSLOCK
-                                                   &kp SPACE            &kp LCTRL   &lt 1 PAGE_UP   &kp DELETE     &kp ENTER
-                                                                        &kp LSHIFT  &lt 2 PAGE_DOWN &kp BACKSPACE
+&kp GRAVE          &kp N1            &kp N2             &kp N3               &kp N4      &kp N5          &kp N6         &kp N7              &kp N8             &kp N9            &kp N0                    &kp MINUS
+&ht_left LGUI TAB  &ht_left LALT Q   &ht_left LCTRL W   &ht_left LSHIFT E    &kp R       &kp T           &kp Y          &kp U               &ht_right RSHIFT I &ht_right RCTRL O &ht_right RALT P          &ht_right RGUI BACKSLASH
+&clip_hist         &kp A             &kp S              &kp D                &kp F       &kp G           &kp H          &kp J               &kp K              &kp L             &kp SEMICOLON             &kp SINGLE_QUOTE
+&lt 3 ESCAPE       &kp Z             &kp X              &kp C                &kp V       &kp B           &kp N          &kp M               &kp COMMA          &kp DOT           &kp SLASH                 &lt 3 CAPSLOCK
+                                                        &kp SPACE            &kp LCTRL   &lt 1 PAGE_UP   &kp DELETE     &kp ENTER
+                                                                             &kp LSHIFT  &lt 2 PAGE_DOWN &kp BACKSPACE
             >;
         };
 
