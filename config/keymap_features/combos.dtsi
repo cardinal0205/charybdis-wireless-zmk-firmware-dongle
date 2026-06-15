@@ -27,42 +27,42 @@
 	    timeout-ms = <50>;
 	    key-positions = <4 7>; // KP: RT
 	    bindings = <&mt RBKT LBKT>; // ][ // 可以用CMD+这个单手返回到代码上一个编辑的地方 或者网页返回
-	    layers = <0>;
+	    layers = <0 1>;
 	};
 
 	combo_rbkt {
 	    timeout-ms = <50>;
 	    key-positions = <7 8>; // KP: YU
 	    bindings = <&kp RBKT>; // ]
-	    layers = <0>;
+	    layers = <0 1>;
 	};
 
 	combo_lpar {
 	    timeout-ms = <50>;
 	    key-positions = <16 19>; // KP: FG
 	    bindings = <&mt RPAR LPAR>; // )(
-	    layers = <0>;
+	    layers = <0 1>;
 	};
 
 	combo_rpar {
 	    timeout-ms = <50>;
 	    key-positions = <19 20>; // KP: HJ
 	    bindings = <&kp RPAR>; // )
-	    layers = <0>;
+	    layers = <0 1>;
 	};
 
 	combo_lbrc {
 	    timeout-ms = <50>;
 	    key-positions = <28 31>; // KP: VB
 	    bindings = <&mt RBRC LBRC>; // }{
-	    layers = <0>;
+	    layers = <0 1>;
 	};
 
 	combo_rbrc {
 	    timeout-ms = <50>;
 	    key-positions = <31 32>; // KP: NM
 	    bindings = <&kp RBRC>; // }
-	    layers = <0>;
+	    layers = <0 1>;
 	}; 
 
 	//combo_bt_sel {
