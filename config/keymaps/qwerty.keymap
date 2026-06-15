@@ -56,7 +56,7 @@
 &kp LEFT_GUI  &ht_left LALT A   &ht_left LCTRL S   &ht_left LSHIFT D    &kp F       &kp G           &kp H          &kp J               &ht_right RSHIFT K &ht_right RCTRL L &ht_right RALT SEMICOLON  &ht_right RIGHT_GUI SINGLE_QUOTE
 &lt 3 ESCAPE  &kp Z             &kp X              &kp C                &kp V       &kp B           &kp N          &kp M               &kp COMMA          &kp DOT           &kp SLASH                 &lt 3 CAPSLOCK
                                                    &kp SPACE            &kp LCTRL   &lt 1 PAGE_UP   &kp DELETE     &kp ENTER
-                                                                        &kp LSHIFT  &lt 1 PAGE_DOWN &kp BACKSPACE
+                                                                        &kp LSHIFT  &lt 2 PAGE_DOWN &kp BACKSPACE
             >;
         };
 
