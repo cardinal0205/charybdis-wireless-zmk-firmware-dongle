@@ -287,7 +287,7 @@ text.br  { font-family: "JetBrainsMono Nerd Font"; fill: var(--all-corner); font
 <g transform="translate(1102, 142)" class="key keypos-23">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
 <text x="0" y="0" class="key tap">\</text>
-<text x="0" y="34" class="key hold"><tspan style="font-size: 78%">RIGHT GUI</tspan></text>
+<text x="0" y="34" class="key hold">RGUI</text>
 </g>
 <g transform="translate(38, 218)" class="key keypos-24">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
