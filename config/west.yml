@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: george-norton
+      url-base: https://github.com/george-norton
     - name: 280Zo
       url-base: https://github.com/280Zo
 
