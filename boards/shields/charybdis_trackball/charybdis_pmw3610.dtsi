@@ -71,4 +71,18 @@
         status = "disabled"; // overridden on central
         device = <&trackball_split>;
     };
+
+    behaviors {
+
+        dpi_cycle: sensor_dpi_cycle {
+            compatible = "zmk,behavior-sensor-attr-cycle";
+            #binding-cells = <1>;
+            values = < 400 600 800 1000 >;
+            attr = <0>;
+            sensor_device = <&trackball>;
+            display-name = "DPI cycle";
+            persistant;
+        };
+
+    };
 };
