@@ -7,6 +7,16 @@
 / {
     behaviors {
 
+        dpi_cycle: sensor_dpi_cycle {
+            compatible = "zmk,behavior-sensor-attr-cycle";
+            #binding-cells = <1>;
+            values = < 400 600 800 1000 >;
+            attr = <0>;
+            sensor_device = <&traceball>;
+            display-name = "DPI cycle";
+            persistant;
+        };
+
         mo_to: behavior_mo_to {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
